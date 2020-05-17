@@ -4,6 +4,21 @@ from time import sleep
 import selenium
 from selenium.common.exceptions import ElementClickInterceptedException
 from selenium.common.exceptions import WebDriverException
+import webdriverdownloader as wdd
+
+
+# For Firefox gecko driver: 
+gecko_dd = wdd.GeckoDriverDownloader()
+gecko_dd.download_and_install()
+
+# For Chrome driver:
+# chrome_dd = wdd.ChromeDriverDownloader()
+# chrome_dd.download_and_install()
+
+# For Opera driver:
+# opera_dd = wdd.OperaChromiumDriverDownloader()
+# opera_dd.download_and_install()
+
 
 post_count = 0
 class InstagramBot:
