@@ -5,7 +5,10 @@ import selenium
 from selenium.common.exceptions import ElementClickInterceptedException
 from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from selenium.webdriver.firefox.options import Options
 
+options = Options()
+options.set_headless(headless=True)
 cap = DesiredCapabilities().FIREFOX
 cap["marionette"] = True
 
