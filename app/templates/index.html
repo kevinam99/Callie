@@ -9,9 +9,14 @@
 <div class="container col-md-6 col-sm-12 col-md-6 col-lg-12">
     Enter your username, password (It's safe, I promise) and the hashtags.
     Click on submit, sit back and watch it go! If you see any errors, it's not a good day for you.
-    <form action="">
+    <form method = "POST">
         <label>Username</label>
         <input type="text" name="username" id="uname">
+        <label>Password</label>
+        <input type="password" name="password" id="pwd">
+        <label>Hashtags</label>
+        <input type="text" name="hashtags" id="pwd">
+        <button type="submit">Submit</button>
     </form>
 </div>
 {% endblock %}
