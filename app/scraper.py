@@ -16,11 +16,6 @@ class InstagramBot:
         self.password = password
         self.bot = webdriver.Firefox(capabilities=cap)
 
-        # Uncomment following line for Chrome browser
-        # self.bot = webdriver.Chrome()
-        #ejaberedsdf
-        # Uncomment following line for Opera browser
-        # self.bot = webdriver.Opera()
     
     def login(self):
         bot = self.bot
