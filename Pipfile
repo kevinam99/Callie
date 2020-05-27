@@ -7,6 +7,8 @@ verify_ssl = true
 
 [packages]
 flask = "*"
+selenium = "==3.141.0"
+webdriverdownloader = "==1.0.0.1"
 
 [requires]
 python_version = "3.6"
