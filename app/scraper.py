@@ -4,18 +4,20 @@ from time import sleep
 import selenium
 from selenium.common.exceptions import ElementClickInterceptedException
 from selenium.common.exceptions import WebDriverException
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+# from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
-cap = DesiredCapabilities().FIREFOX
-cap["marionette"] = False
+# cap = DesiredCapabilities().FIREFOX
+# cap["marionette"] = False
 
 post_count = 0
 class InstagramBot:
     def __init__(self, username, password):
         self.username = username
         self.password = password
-        self.bot = webdriver.Firefox(capabilities=cap)
+        self.bot = webdriver.Firefox()
 
+
+    
     def login(self):
         bot = self.bot
         bot.get('https://www.instagram.com/accounts/login/?source=auth_switcher')
