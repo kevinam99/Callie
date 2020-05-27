@@ -9,6 +9,7 @@ verify_ssl = true
 flask = "*"
 selenium = "==3.141.0"
 webdriverdownloader = "==1.0.0.1"
+gunicorn = "*"
 
 [requires]
 python_version = "3.6"
