@@ -10,7 +10,7 @@ from selenium.webdriver.firefox.options import Options
 options = Options()
 options.set_headless(headless=True)
 cap = DesiredCapabilities().FIREFOX
-cap["marionette"] = True
+cap["marionette"] = False
 
 post_count = 0
 class InstagramBot:
