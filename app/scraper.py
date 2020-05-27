@@ -6,12 +6,7 @@ from selenium.common.exceptions import ElementClickInterceptedException
 from selenium.common.exceptions import WebDriverException
 import webdriverdownloader as wdd
 
-GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
-CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
-chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument('--disable-gpu')
-chrome_options.add_argument('--no-sandbox')
-chrome_options.binary_location = GOOGLE_CHROME_PATH
+
 # For Firefox gecko driver: 
 gecko_dd = wdd.GeckoDriverDownloader()
 gecko_dd.download_and_install()
@@ -30,7 +25,7 @@ class InstagramBot:
     def __init__(self, username, password):
         self.username = username
         self.password = password
-        self.bot = webdriver.Chrome(execution_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
+        self.bot = webdriver.Firefox()
 
         # Uncomment following line for Chrome browser
         # self.bot = webdriver.Chrome()
