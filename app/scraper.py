@@ -52,7 +52,7 @@ class InstagramBot:
         bot = self.bot
         bot.get('https://www.instagram.com/explore/tags/' + hashtag +'/')
         sleep(5)
-        for i in range(10):
+        for i in range(5):
             bot.execute_script('window.scrollTo(0, document.body.scrollHeight)')
             sleep(2)
         
@@ -68,25 +68,36 @@ class InstagramBot:
         print("Getting posts to like...")
         posts = bot.find_elements_by_class_name('v1Nh3')
         print("Liking posts...")
-        for post in range(9, len(posts)):
+        posts[9].click()
+        sleep(5)
+        for i in range(10):
             try:
-                global post_count
-                posts[post].click()
-                sleep(5)
                 like_button = bot.find_element_by_class_name('fr66n').click()
                 print("Post liked!")
                 sleep(2)
-                close_button = bot.find_element_by_class_name('ckWGn').click()
+                # find_element_by_xpath('//input[@aria-label="Search"]')
+                next_button = bot.find_element_by_class_name('coreSpriteRightPaginationArrow').click()
                 sleep(2)
-                post_count = post_count + 1
-                print(post_count)
+                print(i + 1)
+        # for post in range(9, len(posts)):
+        #     try:
+        #         global post_count
+        #         posts[post].click()
+        #         sleep(5)
+        #         like_button = bot.find_element_by_class_name('fr66n').click()
+        #         print("Post liked!")
+        #         sleep(2)
+        #         next_button = bot.find_element_by_class_name('DdSX2').click()
+        #         sleep(2)
+        #         post_count = post_count + 1
+        #         print(post_count)
 
-                if post_count == 29:
-                    print("Reached limit. Cooling down...")
-                    sleep(60 * 10)
-                    post_count = 0
-                    print("Cool down complete. Restarting...")
-                    like_posts_in()
+        #         if post_count == 29:
+        #             print("Reached limit. Cooling down...")
+        #             sleep(60 * 10)
+        #             post_count = 0
+        #             print("Cool down complete. Restarting...")
+        #             like_posts_in()
 
             # except (selenium.common.exceptions.ElementClickInterceptedException):
             #     # Occurs when too many posts have been liked at a time interval. The 'Action Blocked' popup shows
