@@ -17,7 +17,7 @@ class InstagramBot:
     def __init__(self, username, password):
         self.username = username
         self.password = password
-        self.bot = webdriver.Firefox(capabilities=cap, firefox_options=options, executable_path = '../vendor/firefox/firefox')
+        self.bot = webdriver.Firefox(capabilities=cap, firefox_options=options, executable_path = '/app/vendor/firefox/firefox')
 
 
     
