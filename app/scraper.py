@@ -29,7 +29,7 @@ class InstagramBot:
 
         # Uncomment following line for Chrome browser
         # self.bot = webdriver.Chrome()
-        
+        #ejabere
         # Uncomment following line for Opera browser
         # self.bot = webdriver.Opera()
     
