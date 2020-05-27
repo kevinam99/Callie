@@ -7,7 +7,7 @@ from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 cap = DesiredCapabilities().FIREFOX
-cap["marionette"] = False
+cap["marionette"] = True
 
 post_count = 0
 class InstagramBot:
