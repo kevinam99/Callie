@@ -2,13 +2,6 @@ from flask import render_template, request
 
 from app import app
 
-import webdriverdownloader as wdd
-
-
-# For Firefox gecko driver: 
-gecko_dd = wdd.GeckoDriverDownloader()
-gecko_dd.download_and_install()
-
 @app.route('/')
 def index():
     return render_template("index.html")
