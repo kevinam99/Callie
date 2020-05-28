@@ -45,13 +45,15 @@ class InstagramBot:
         sleep(10)
 
     def like_posts_in(self, hashtag):
+        print("Entered like posts function")
         bot = self.bot
+        print("Getting posts based on hashtag")
         bot.get('https://www.instagram.com/explore/tags/' + hashtag +'/')
         sleep(10)
         print("Loaded hashtags")
-        for i in range(5):
-            bot.execute_script('window.scrollTo(0, document.body.scrollHeight)')
-            sleep(10)
+        # for i in range(5):
+        #     bot.execute_script('window.scrollTo(0, document.body.scrollHeight)')
+        #     sleep(10)
         
         """
             Algorithm:

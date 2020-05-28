@@ -25,6 +25,7 @@ def run_scraper(username, password, hashtags):
     for hashtag in hashtags:
         print("in loop in views.py")
         me.like_posts_in(hashtag)
+        print("Back to loop in views.py")
 
 
 @app.route('/about')
