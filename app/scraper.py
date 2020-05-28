@@ -6,18 +6,26 @@ from selenium.common.exceptions import ElementClickInterceptedException
 from selenium.common.exceptions import WebDriverException
 import os
 
-chrome_options = webdriver.ChromeOptions()
-chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-chrome_options.add_argument("--headless")
-chrome_options.add_argument("--disable-dev-shm-usage")
-chrome_options.add_argument("--no-sandbox")
 
 post_count = 0
 class InstagramBot:
+    def use_chrome(self):
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--no-sandbox")
+        return webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+    
+    def use_firefox(self):
+        
+        return webdriver.Firefox()
+
+
     def __init__(self, username, password):
         self.username = username
         self.password = password
-        self.bot = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+        self.bot = self.use_firefox()
 
 
     
@@ -86,7 +94,6 @@ class InstagramBot:
         #             post_count = 0
         #             print("Cool down complete. Restarting...")
         #             like_posts_in()
-
             # except (selenium.common.exceptions.ElementClickInterceptedException):
             #     # Occurs when too many posts have been liked at a time interval. The 'Action Blocked' popup shows
             #     check_if_action_blocked = bot.find_element_by_class_name('RnEpo')
@@ -95,13 +102,14 @@ class InstagramBot:
             #         sleep(60 * 10)
             #         like_posts_in()
             
-            except (KeyboardInterrupt):
+            except KeyboardInterrupt:
                 print("I'm done")
                 bot.close()
                 bot.quit()
                 
             except Exception as ex:
                 print(ex)
+    
             
 
 
