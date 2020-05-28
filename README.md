@@ -6,7 +6,7 @@
 
 Callie is simply a web implementattion of [this](https://github.com/kevinam99/Instagram-Like-Bot) project created by me a few months ago. I thought of making a web version of this so it is easy to show it to anyone, anywhere.
 
-The [`master`](https://github.com/kevinam99/Callie/) branch contains development from localhost and everything works perfectly. The production version is in the [`heroku`](https://github.com/kevinam99/Callie/tree/heroku) branch. 
+The [`master`](https://github.com/kevinam99/Callie/) branch contains development from localhost and everything works perfectly. The production version is in the [`heroku`](https://github.com/kevinam99/Callie/tree/heroku) branch. Callie has been deployed [here on Heroku](https://callie-kevinam99.herokuapp.com/).
 
 There are a lot of problems while running the app on Heroku. I tried umpteen Firefox and Geckodriver buildpacks but nothing worked. So I decided to use the Chrome webdriver, but still there are issues creeping up.
 
