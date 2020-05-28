@@ -23,6 +23,7 @@ def run_scraper(username, password, hashtags):
     me.login()
     print("Logged in as " + username)
     for hashtag in hashtags:
+        print("in loop in views.py")
         me.like_posts_in(hashtag)
 
 
