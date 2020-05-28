@@ -42,15 +42,15 @@ class InstagramBot:
         password.send_keys(self.password)
         sleep(1)
         password.send_keys(Keys.ENTER)
-        sleep(5)
+        sleep(10)
 
     def like_posts_in(self, hashtag):
         bot = self.bot
         bot.get('https://www.instagram.com/explore/tags/' + hashtag +'/')
-        sleep(5)
+        sleep(10)
         for i in range(5):
             bot.execute_script('window.scrollTo(0, document.body.scrollHeight)')
-            sleep(2)
+            sleep(1)
         
         """
             Algorithm:
@@ -65,7 +65,7 @@ class InstagramBot:
         posts = bot.find_elements_by_class_name('v1Nh3')
         print("Liking posts...")
         posts[9].click()
-        sleep(5)
+        sleep(10)
         for i in range(10):
             try:
                 like_button = bot.find_element_by_class_name('fr66n').click()
