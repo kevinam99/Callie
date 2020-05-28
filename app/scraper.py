@@ -49,7 +49,7 @@ class InstagramBot:
         bot = self.bot
         print("Getting posts based on hashtag")
         bot.get('https://www.instagram.com/explore/tags/' + hashtag +'/')
-        sleep(10)
+        sleep(20)
         print("Loaded hashtags")
         # for i in range(5):
         #     bot.execute_script('window.scrollTo(0, document.body.scrollHeight)')
