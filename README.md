@@ -1,6 +1,6 @@
 # Callie
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-![Star this repository](https://img.shields.io/github/stars/kevinam99/aditi?style=social)
+![Star this repository](https://img.shields.io/github/stars/kevinam99/Callie?style=social)
 
 
 
